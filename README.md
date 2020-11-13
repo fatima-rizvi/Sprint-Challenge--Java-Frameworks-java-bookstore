@@ -50,7 +50,14 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Can you explain exception handling in your application?
+    For some of the methods in BookServiceImpl, I implemented the customer exception handling that we made (ResourceNotFoundException).
 2. Can you explain your user authentication flow?
+    Users are registered by being added to the database through the /user endpoint in 
+    UserController. The AuthorzationServerConfig has a /login endpoint where registered users
+    can login and recieve a security token that gets stored in their local storage and is sent
+    to the backend everytime they make a request to it. To logout, the user hits the 
+    logout endpoint in the LogoutController, and their access token is removed from the 
+    backend's token store. 
 3. Can you show me your unit tests and describe how they work?
 4. Can you show how you deployed your application to a cloud service with a persistent database?
 
